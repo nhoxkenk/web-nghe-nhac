@@ -1,0 +1,29 @@
+var header__height = 50px;
+
+
+.container-fluid {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}

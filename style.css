@@ -58,6 +58,11 @@ body {
   height: 50px;
   cursor: pointer;
 }
+
+.type-item > a {
+  text-decoration: none;
+  color: #000;
+}
 .type-list .type-item:hover{
   color: rgb(130 200 220);
   background-color: whitesmoke;
@@ -163,4 +168,8 @@ body {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+}
+
+.content__section-img {
+  width: 100%;
 }
