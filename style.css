@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 8px;
+  z-index: 1000;
 }
 
 .header-content {
@@ -41,7 +42,6 @@ body {
 }
 .menu{
   flex: 7;
-  w
 }
 .menu .type-list{
   height: 100%;
@@ -104,9 +104,58 @@ body {
   
 }
 
+/* slider */
+.sliders {
+  width: 1000px;
+  margin: auto;
+  margin-top: 54px;
+}
+.mySlides {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 50%;
+  /* background-image: url(./img/background.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 200px; */
 
+}
 
+.slider1 {
+  background-image: url('https://photo-zmp3.zadn.vn/banner/8/3/b/c/83bcfc637f6b62b7bacea13426b81fd3.jpg');
+}
+.slider2 {
+  background-image: url('https://photo-zmp3.zadn.vn/banner/5/5/e/b/55ebe06a7c8d5a4fa29a2b6474b6d07d.jpg');
+ 
+}
+.slider3 {
+  background-image: url('https://photo-zmp3.zadn.vn/banner/b/d/5/f/bd5fa8a1263f202a389308f4afa67a04.jpg');
+ 
+}
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }  
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }  
+  to {
+    opacity: 1;
+  }
+}
 
 /* content */
 
@@ -114,13 +163,4 @@ body {
   margin-top: 50px;
   display: flex;
   justify-content: center;
-}
-.content {
-  width: 1000px;
-  max-width: 100%;
-  padding-top: 50%;
-  background-image: url(./img/background.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 }
