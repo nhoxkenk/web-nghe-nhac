@@ -36,6 +36,9 @@ body {
   text-decoration: none;
   color: whitesmoke;
 }
+.logo:hover{
+  transform: scale(1.15);
+}
 .menu{
   flex: 7;
   w
@@ -49,6 +52,14 @@ body {
 }
 .menu .type-list .type-item{
   width: 15%;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.type-list .type-item:hover{
+  color: rgb(130 200 220);
+  background-color: whitesmoke;
+  border-radius: 8px;
 }
 .user {
   color: whitesmoke;
