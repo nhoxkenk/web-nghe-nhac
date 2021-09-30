@@ -109,6 +109,18 @@ body {
 
 
 /* content */
-.content {
+
+.content-flex{
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 1000px;
+  max-width: 100%;
+  padding-top: 50%;
+  background-image: url(./img/background.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 }
