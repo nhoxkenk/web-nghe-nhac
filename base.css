@@ -19,6 +19,7 @@ var header__height = 50px;
 }
 
 .col {
+    position: relative;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -26,4 +27,8 @@ var header__height = 50px;
 .col-3 {
     flex: 0 0 25%;
     max-width: 25%;
+}
+.col-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
 }
