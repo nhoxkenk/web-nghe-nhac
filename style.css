@@ -38,6 +38,7 @@ body {
   font-size: 40px;
   text-decoration: none;
   color: whitesmoke;
+  line-height: 50px;
 }
 .logo:hover{
   transform: scale(1.15);
