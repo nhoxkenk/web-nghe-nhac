@@ -74,7 +74,7 @@ img{
   display: flex;
   align-items: center;
 }
-}
+
 
 .type-list .type-item:hover> a {
   opacity: 0.7;
@@ -250,29 +250,37 @@ img{
 /* BXH */
 .content-ranking{
   margin-top: 50px;
-}
-.top-song img{
-  width: 45%;
-  padding-right: 4px;
-}
-.top-song{
-  display: flex;
-}
-.top-song span{
-  display: block;
+  
 }
 
-.top-song-about{
+.content-ranking > h1 {
+  margin-bottom: 20px;
+}
+
+.top-song {
+  display: flex;
+}
+
+.top-song-img img {
+  width: 120px;
+}
+
+.top-song-des {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.singer {
-  font-size: 12px;
-  opacity: 0.6;
-} 
-.number-song{
-  font-size: 28px;
-  color: rgb(130 200 220);
+  justify-content: space-around;
+  padding-left: 8px;
 }
 
+.top-song-name {
+  font-weight: 500;
+}
+
+.top-song-auth {
+  color: rgb(167, 165, 165);
+}
+
+.top-song-rank {
+  font-size: 40px;
+  color: #bbb;
+}

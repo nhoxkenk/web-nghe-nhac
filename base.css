@@ -1,4 +1,6 @@
-var header__height = 50px;
+:root {
+    --hehader-height: 50px;
+}
 
 
 .container-fluid {
@@ -19,7 +21,6 @@ var header__height = 50px;
 }
 
 .col {
-    position: relative;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -28,7 +29,9 @@ var header__height = 50px;
     flex: 0 0 25%;
     max-width: 25%;
 }
+
 .col-4 {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
 }
+
