@@ -246,3 +246,33 @@ img{
   opacity: 0.6;
   transform: scale(1.05);
 }
+
+/* BXH */
+.content-ranking{
+  margin-top: 50px;
+}
+.top-song img{
+  width: 45%;
+  padding-right: 4px;
+}
+.top-song{
+  display: flex;
+}
+.top-song span{
+  display: block;
+}
+
+.top-song-about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.singer {
+  font-size: 12px;
+  opacity: 0.6;
+} 
+.number-song{
+  font-size: 28px;
+  color: rgb(130 200 220);
+}
+
