@@ -172,7 +172,7 @@ img{
   background-image: url('https://photo-zmp3.zadn.vn/banner/8/3/b/c/83bcfc637f6b62b7bacea13426b81fd3.jpg');
 }
 .slider2 {
-  background-image: url('https://photo-zmp3.zadn.vn/banner/5/5/e/b/55ebe06a7c8d5a4fa29a2b6474b6d07d.jpg');
+  background-image: url('./img/background.jpg');
  
 }
 .slider3 {
@@ -262,28 +262,44 @@ img{
 
 .top-song {
   display: flex;
+  height: 100%;
 }
 
 .top-song-img img {
   width: 120px;
 }
 
-.top-song-des {
+.top-song-des, .low-song-des {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding-left: 8px;
 }
 
-.top-song-name {
+.top-song-name,.low-song-name {
   font-weight: 500;
 }
 
-.top-song-auth {
+.top-song-auth , .low-song-auth{
   color: rgb(167, 165, 165);
+  font-size: 12px;
 }
 
 .top-song-rank {
   font-size: 40px;
+  color: rgb(130 200 220);
+}
+.low-song-rank {
+  font-size: 25px;
   color: #bbb;
+}
+
+.low-song-img,.low-song-img img{
+  width: 70px;
+}
+.low-song-des .low-song-name{
+  font-size: 14px;
+}
+.low-song-des .low-song-auth{
+  font-size: 10px;
 }

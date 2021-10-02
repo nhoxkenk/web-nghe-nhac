@@ -19,6 +19,14 @@
     margin-left: -4px;
     margin-right: -4px;
 }
+.row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70px;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 10px;
+}
 
 .col {
     padding-left: 4px;
