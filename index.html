@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
     <link rel="stylesheet" href="./base.css">
 </head>
 
@@ -62,7 +63,7 @@
         </div>
 
         
-        <!---->
+        <!-------------------------------------------------------------------->
         <div class="content">
             <div class="content__section" id="nhacviet">
                 <div class="container">
@@ -71,28 +72,28 @@
                         <div class="col col-3">
                             <div class="relative-play-btn">
                                 <img src="./song_img/phaichangtadayeu.jpg" alt="Phải chăng em đã yêu" class="content__section-img">
-                                <i class="play-btn fas fa-play"></i>
+                                <i class="play-btn fas fa-play" id="0"></i>
                             </div>
                             <p class="content-section-des">Phải chăng em đã yêu</p>
                         </div>
                         <div class="col col-3">
                             <div class="relative-play-btn">
                                 <img src="./song_img/saigondaulongqua.jpg" alt="Sài gòn đau lòng quá" class="content__section-img">
-                                <i class="play-btn fas fa-play"></i>
+                                <i class="play-btn fas fa-play" id="1"></i>
                             </div>
                             <p class="content-section-des">Sài gòn đau lòng quá</p>
                         </div>
                         <div class="col col-3">
                             <div class="relative-play-btn">
                                 <img src="./song_img/anhdechcanginhieu ngoai em.jpg" alt="Anh đếch cần gì nhiều ngoài em" class="content__section-img">
-                                <i class="play-btn fas fa-play"></i>
+                                <i class="play-btn fas fa-play" id="2"></i>
                             </div>
                             <p class="content-section-des">Anh đếch cần gì nhiều ngoài em</p>
                         </div>
                         <div class="col col-3">
                             <div class="relative-play-btn">
                                 <img src="./song_img/chilakhongcungnhau.jpg" alt="Chỉ là không cùng nhau" class="content__section-img">
-                                <i class="play-btn fas fa-play"></i>
+                                <i class="play-btn fas fa-play" id="3"></i>
                             </div>
                             <p class="content-section-des">Chỉ là không cùng nhau</p>
                         </div>
@@ -422,14 +423,26 @@
             </div>
         </div>
         
-        
+        <div id="aplayer"></div>
         
         <!----->
         <footer class="footer">
            
         </footer>
 
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+        <script>
+            $(".play-btn").on('click', function(e){
+			var dataSwitchId = this.id;
+			console.log(dataSwitchId);
+            ap.list.switch(dataSwitchId);
+            ap.play();
+        });
+        </script>
         <script src="./main.js"></script>
+        <script src="./player.js"></script>
 </body>
 
 </html>

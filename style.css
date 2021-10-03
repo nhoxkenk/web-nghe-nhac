@@ -80,11 +80,6 @@ img{
   opacity: 0.7;
 }
 
-.type-list .type-item:hover{
-  /* color: rgb(130 200 220);
-  background-color: whitesmoke;
-  border-radius: 8px; */
-}
 .user {
   color: whitesmoke;
   position: relative;
@@ -302,4 +297,41 @@ img{
 }
 .low-song-des .low-song-auth{
   font-size: 10px;
+}
+
+#aplayer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 -2px 2px #dadada;
+  background-color: #fff;
+  transition: all ease 0.5s;
+}
+#aplayer.showPlayer{
+  bottom: 0;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+  background: #e0e0e0;
+  height: 4px;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+  height: 3px;
+  background-color: #2196F3 !important;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+  background-color: #2196F3 !important;
+}
+
+.aplayer .aplayer-icon{
+  width: 20px;
+  height: 20px;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+  fill: rgb(0, 0, 0);
+}
+.aplayer .aplayer-info .aplayer-music{
+  margin-bottom: 10px;
 }
