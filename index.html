@@ -439,6 +439,9 @@
 			console.log(dataSwitchId);
             ap.list.switch(dataSwitchId);
             ap.play();
+            ap.list.hide();
+            var ele = document.getElementById("aplayer");
+            ele.classList.add('showPlayer');
         });
         </script>
         <script src="./main.js"></script>
