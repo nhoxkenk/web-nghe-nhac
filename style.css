@@ -335,3 +335,35 @@ img{
 .aplayer .aplayer-info .aplayer-music{
   margin-bottom: 10px;
 }
+
+/* footer */
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  margin-top: 50px;
+  padding-bottom: 88px;
+  box-sizing: unset;
+  background-color: rgb(130 200 220);
+}
+.social {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-around;
+  width: 14%;
+}
+.social a{
+  color: #000;
+}
+.social .icon-social:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+}
