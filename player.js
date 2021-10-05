@@ -1,7 +1,6 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     autoplay: false,
-    theme: '#FADFA3',
     loop: 'all',
     volume: 0.7,
     mutex: true,
