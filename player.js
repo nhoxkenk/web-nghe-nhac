@@ -1,13 +1,13 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
+    mini: false,
     autoplay: false,
-    theme: '#b7daff',
-    loop: 'none',
+    theme: '#FADFA3',
+    loop: 'all',
     preload: 'auto',
     volume: 0.7,
     mutex: true,
-    listMaxHeight: 5,
-    listFolder: false,
+    listFolded: true,
     audio: [
      {
         name: 'Phải chăng em đã yêu',
