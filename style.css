@@ -299,7 +299,7 @@ img{
   font-size: 10px;
 }
 
-#aplayer{
+/* #aplayer{
   position: fixed;
   bottom: -50%;
   left: 0;
@@ -334,7 +334,7 @@ img{
 }
 .aplayer .aplayer-info .aplayer-music{
   margin-bottom: 10px;
-}
+} */
 
 /* footer */
 .footer{
@@ -366,4 +366,121 @@ img{
   flex-direction: column;
   font-size: 12px;
   text-align: center;
+}
+
+/*  HMD  */
+
+:root {
+  --primary-color: #ec1f55;
+  --text-color: #333;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+
+.dashboard {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  flex-direction: row;
+  background-color: #181818;
+}
+
+header {
+  margin-right: 20px;
+}
+header h4 {
+  font-size: 16px;
+  color: #ccc
+}
+header h2 {
+  font-size: 16px;
+  color: #ccc
+}
+.cd {
+  width: 50px;
+  /* height: 50px; */
+  margin-right: 20px;
+}
+.cd-thumb {
+  /* padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%; */
+  width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+
+.btn {
+  margin: 0 12px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.progress {
+  width: 1000px;
+}
+.progress {
+  /* width: 100%; */
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+.control-song {
+  display: flex;
+}
+
+.playlist {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgb(247, 178, 247);
+  
+}
+.song .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  background-color: var(--primary-color);
+  cursor: pointer;
 }
