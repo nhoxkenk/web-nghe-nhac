@@ -29,7 +29,7 @@ img{
   display: flex;
   justify-content: center;
   /* border-radius: 8px; */
-  z-index: 1000;
+  z-index: 1;
 }
 
 .header-content {
@@ -356,7 +356,7 @@ img{
   width: 100%;
   padding: 20px 0;
   color: #fff;
-  z-index: 2;
+  z-index: 1000;
 }
 
 .player-header {
@@ -468,7 +468,7 @@ img{
   color: rgb(167, 165, 165);
   /* bottom: 0; */
   width: 320px;
-  z-index: 1;
+  z-index: 10;
   height: 100vh;
   overflow-y: scroll; 
 }
@@ -501,7 +501,7 @@ img{
 }
 
 .playlist::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: #2d2f32;
 }
 
 .playlist::-webkit-scrollbar-thumb {
