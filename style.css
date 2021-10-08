@@ -214,9 +214,9 @@ img{
   justify-content: center;
 } */
 
-.content {
-  margin-top: 50px;
-}
+/* .content {
+  margin-top: 0px;
+} */
 .content__section-heading{
   margin-bottom: 20px;
 }
@@ -313,7 +313,7 @@ img{
   flex-direction: column;
   height: 100px;
   margin-top: 50px;
-  padding-bottom: 88px;
+  padding-bottom: 100px;
   box-sizing: unset;
   background-color: rgb(130 200 220);
 }
