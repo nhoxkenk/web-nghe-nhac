@@ -24,7 +24,8 @@ const playlist = $('.playlist')
 const cd = $('.cd')
 const playBtn = $('.btn-toggle-play')
 const player = $('.player')
-const heading = $('header h2')
+const heading = $('.player-header h2')
+const singer = $('.player-header h4')
 const cdThumb = $('.cd-thumb')
 const audio = $('#audio') 
 const progress = $('.progress')
@@ -32,7 +33,7 @@ const nextBtn = $('.btn-next')
 const prevBtn = $('.btn-prev')
 const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
-const app = {
+const list1 = {
     currentIndex : 0,
     isPlaying: false,
     isRandom: false,
@@ -41,31 +42,30 @@ const app = {
 
     songs: [
         {
-            name: 'Bài hát thứ nhất',
-            singer: 'Tác giả thứ nhất',
+            name: 'Phải Chăng Em Đã Yêu',
+            singer: 'JUKY SAN',
             path: './songs/vietnam/1.mp3',
-            img: './song_img/chilakhongcungnhau.jpg'
+            img: './song_img/phaichangtadayeu.jpg'
         },
         {
-            name: 'Bài hát thứ 2',
-            singer: 'Tác giả thứ 2',
+            name: 'Sài Gòn Đau Lòng Quá',
+            singer: 'Hứa Kim Tuyền, Hoàng Duyên',
             path: './songs/vietnam/2.mp3',
-            img: './song_img/chilakhongcungnhau.jpg'
+            img: './song_img/saigondaulongqua.jpg'
 
         },
         {
-            name: 'Bài hát thứ 3',
-            singer: 'Tác giả thứ 3',
+            name: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
+            singer: 'Đen Vâu',
             path: './songs/vietnam/3.mp3',
-            img: './song_img/chilakhongcungnhau.jpg'
+            img: './song_img/anhdechcanginhieu ngoai em.jpg'
 
         },
         {
-            name: 'Bài hát thứ 4',
-            singer: 'Tác giả thứ nhất',
+            name: 'Chỉ Là Không Cùng Nhau',
+            singer: 'Tăng Phúc, Trương Thảo Nhi',
             path: './songs/vietnam/4.mp3',
             img: './song_img/chilakhongcungnhau.jpg'
-
         }
     ],
     defineProperties: function () {
@@ -89,13 +89,14 @@ const app = {
                     <h3 class="title">${song.name}</h3>
                     <p class="author">${song.singer}</p>
                 </div>
-                <div class="option">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
+                <a href="${song.path}" class="btn btn-download" download>
+                    <i class="ti-download"></i>
+                </a>
             </div>
             `
         })
-        playlist.innerHTML = htmls.join("");
+        
+        playlist.innerHTML = "<h2 class = \"playlist-heading\">Danh sách bài hát</h2>" + htmls.join("");
     },
     handleEvents: function(){
         const _this = this ;
@@ -221,6 +222,7 @@ const app = {
         heading.textContent = this.currentSong.name;
         cdThumb.style.backgroundImage = `url('${this.currentSong.img}')`
         audio.src = this.currentSong.path;
+        singer.textContent = this.currentSong.singer
     },
     loadConfig: function () {
         this.isRandom = this.config.isRandom
@@ -278,4 +280,24 @@ const app = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-// app.start();  
+list1.start();  
+
+
+const playlistBtn = $('.btn-listmusic')
+playlistBtn.onclick = function () {
+    setTimeout(() => {
+        playlist.classList.toggle('hiden')
+    },100)
+    playlistBtn.classList.toggle('active')
+}
+
+const songlist1 = document.querySelectorAll('.song-list1')
+songlist1.forEach(function(currentValue,index){
+    currentValue.onclick = function () {
+        document.querySelector('.dashboard').classList.remove('hiden')
+        console.log(index);
+        list1.currentIndex = index;
+        list1.loadCurrentSong()
+        audio.play()
+    }
+})
