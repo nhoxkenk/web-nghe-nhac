@@ -82,11 +82,11 @@ img{
   opacity: 0.7;
 }
 
-.type-list .type-item:hover{
-  /* color: rgb(130 200 220);
+/* .type-list .type-item:hover{
+  color: rgb(130 200 220);
   background-color: whitesmoke;
-  border-radius: 8px; */
-}
+  border-radius: 8px;
+} */
 .user {
   color: whitesmoke;
   position: relative;

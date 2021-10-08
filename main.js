@@ -297,6 +297,7 @@ songlist1.forEach(function(currentValue,index){
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         list1.currentIndex = index;
+        list1.render()
         list1.loadCurrentSong()
         audio.play()
     }
