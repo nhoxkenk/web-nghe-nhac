@@ -313,13 +313,13 @@ const nhacTruTinh = {
 
     songs: [
         {
-            name: 'Con Đường Xưa Em ĐI',
+            name: 'Con Đường Xưa Em Đi',
             singer: 'Lan Anh',
             path: './songs/trutinh/5.mp3',
-            img: './song_img/.jpg'
+            img: './song_img/TTlamdauxula.jpg'
         },
         {
-            name: 'Sài Gòn Đau Lòng Quá',
+            name: 'Làm Dâu Xứ Lạ',
             singer: 'Hứa Kim Tuyền, Hoàng Duyên',
             path: './songs/vietnam/2.mp3',
             img: './song_img/saigondaulongqua.jpg'
