@@ -1,433 +1,490 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Music Creator</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#000000">
-    <meta name="viewport" content="width=device-width , initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <link rel="stylesheet" href="./base.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Music Creator</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="theme-color" content="#000000">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+        <link rel="stylesheet" href="./themify-icons-font/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./base.css">
+    </head>
 
-<body>
-        <!---->
-        <div class="header">
-            <header class="header-content">
-                <a href="#" class="logo">
-                    <i class="fab fa-tumblr-square"></i>
-                    MUSIC
-                </a>
-                <div class="menu">
-                    <ul class="type-list">
-                        <li class="type-item"><a href="#nhacviet">Nhạc việt</a></li>
-                        <li class="type-item"><a href="#nhactrutinh">Trữ tình</a></li>
-                        <li class="type-item"><a href="#nhacUSUK">US-UK</a></li>
-                        <li class="type-item"><a href="#nhachanquoc">Hàn Quốc</a></li>
-                        <li class="type-item"><a href="#nhacrap">Rap</a></li>
-                        <li class="type-item"><a href="#BXH">BXH</a></li>
-                    </ul>
-                </div>
-                <div class="user">
-                    <i class="fas fa-user-circle"></i>
-                    <p class="user-name">Người dùng</p>
-                    <i class="sort-down fas fa-sort-down"></i>
-                    <div class="user-info">
-                        <span>
-                            <i class="fas fa-user-circle user-info-icon"></i>
-                            Ngoại tuyến
-                        </span>
-                        <span>
-                            <i class="fas fa-sign-in-alt user-info-icon"></i>
-                            <a href="#">Đăng nhập</a>
-                        </span>
-                        <span>
-                            <i class="fas fa-sign-out-alt user-info-icon"></i>
-                            <a href="#">Đăng xuất</a>
-                        </span>
-                        
+    <body>
+            <!---->
+            <div class="header">
+                <header class="header-content">
+                    <a href="#" class="logo">
+                        <i class="fab fa-tumblr-square"></i>
+                        MUSIC
+                    </a>
+                    <div class="menu">
+                        <ul class="type-list">
+                            <li class="type-item"><a href="#nhacviet">Nhạc việt</a></li>
+                            <li class="type-item"><a href="#nhactrutinh">Trữ tình</a></li>
+                            <li class="type-item"><a href="#nhacUSUK">US-UK</a></li>
+                            <li class="type-item"><a href="#nhachanquoc">Hàn Quốc</a></li>
+                            <li class="type-item"><a href="#nhacrap">Rap</a></li>
+                            <li class="type-item"><a href="#BXH">BXH</a></li>
+                        </ul>
                     </div>
-                </div>
-            </header>
-        </div>
-        
-        <div class="sliders">
-            <div class="mySlides fade slider1"></div>
-            <div class="mySlides fade slider2"></div>
-            <div class="mySlides fade slider3"></div>
-        </div>
-
-        
-        <!-------------------------------------------------------------------->
-        <div class="content">
-            <div class="content__section" id="nhacviet">
-                <div class="container">
-                    <h2 class="content__section-heading">Nhạc Việt</h2>
-                    <div class="row">
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/phaichangtadayeu.jpg" alt="Phải chăng em đã yêu" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="0"></i>
-                            </div>
-                            <p class="content-section-des">Phải chăng em đã yêu</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/saigondaulongqua.jpg" alt="Sài gòn đau lòng quá" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="1"></i>
-                            </div>
-                            <p class="content-section-des">Sài gòn đau lòng quá</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/anhdechcanginhieu ngoai em.jpg" alt="Anh đếch cần gì nhiều ngoài em" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="2"></i>
-                            </div>
-                            <p class="content-section-des">Anh đếch cần gì nhiều ngoài em</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/chilakhongcungnhau.jpg" alt="Chỉ là không cùng nhau" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="3"></i>
-                            </div>
-                            <p class="content-section-des">Chỉ là không cùng nhau</p>
+                    <div class="user">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="user-name">Người dùng</p>
+                        <i class="sort-down fas fa-sort-down"></i>
+                        <div class="user-info">
+                            <span>
+                                <i class="fas fa-user-circle user-info-icon"></i>
+                                Ngoại tuyến
+                            </span>
+                            <span>
+                                <i class="fas fa-sign-in-alt user-info-icon"></i>
+                                <a href="#">Đăng nhập</a>
+                            </span>
+                            <span>
+                                <i class="fas fa-sign-out-alt user-info-icon"></i>
+                                <a href="#">Đăng xuất</a>
+                            </span>
+                            
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="content__section" id="nhactrutinh">
-                <div class="container">
-                    <h2 class="content__section-heading">Nhạc trữ tình</h2>
-                    <div class="row">
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <div class="relative-play-btn">
-                                    <img src="./song_img/TThoanovedem.jpg" alt="Con đường xưa em đi" class="content__section-img">
-                                </div>
-                                <i class="play-btn fas fa-play" id="4"></i>
-                            </div>
-                            <p class="content-section-des">Con đường xưa em đi</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/TTlamdauxula.jpg" alt="Làm dâu xứ lạ" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="5"></i>
-                            </div>
-                            <p class="content-section-des">Làm dâu xứ lạ</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/TTtauanhquanui.jpg" alt="Tàu anh qua núi" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="6"></i>
-                            </div>
-                            <p class="content-section-des">Tàu anh qua núi</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/TTquangbinhqueta.jpg" alt="Quảng bình quê ta ơi" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="7"></i>
-                            </div>
-                            <p class="content-section-des">Quảng bình quê ta ơi</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content__section" id="nhacUSUK">
-                <div class="container">
-                    <h2 class="content__section-heading">US-UK</h2>
-                    <div class="row">
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/USUKnotimetodie.jpg" alt="No time to die" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="8"></i>
-                            </div>
-                            <p class="content-section-des">No time to die</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/USUKphysical.jpg" alt="Physical" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="9"></i>
-                            </div>                            
-                            <p class="content-section-des">Physical</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/USUKsouvernir.jpg" alt="Souvenir" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="10"></i>
-                            </div>                            
-                            <p class="content-section-des">Souvenir</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/USUKthe1.jpg" alt="The 1" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="11"></i>
-                            </div>
-                            <p class="content-section-des">The 1</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content__section" id="nhachanquoc">
-                <div class="container">
-                    <h2 class="content__section-heading">Hàn quốc</h2>
-                    <div class="row">
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/nhachan2.jpg" alt="Ddu-Du Ddu-Du" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="12"></i>
-                            </div>
-                            <p class="content-section-des">Ddu-Du Ddu-Du</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/nhachan.jpg" alt="Lalisa" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="13"></i>
-                            </div>
-                            <p class="content-section-des">Lalisa</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/nhachan4.jpg" alt="Loco" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="14"></i>
-                            </div>
-                            <p class="content-section-des">Loco</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/nhachan3.jpg" alt="Not Today" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="15"></i>
-                            </div>
-                            <p class="content-section-des">Not Today</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content__section" id="nhacrap">
-                <div class="container">
-                    <h2 class="content__section-heading">Rap</h2>
-                    <div class="row">
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/RAPcauca.jpg" alt="Cậu Cả" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="16"></i>
-                            </div>
-                            <p class="content-section-des">Cậu Cả</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/Rap thu cuoi.jpg" alt="Thu Cuối" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="17"></i>
-                            </div>
-                            <p class="content-section-des">Thu Cuối</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/trontim.jpg" alt="Trốn tìm" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="18"></i>
-                            </div>
-                            <p class="content-section-des">Trốn tìm</p>
-                        </div>
-                        <div class="col col-3">
-                            <div class="relative-play-btn">
-                                <img src="./song_img/Rap what love is.jpg" alt="What love is" class="content__section-img">
-                                <i class="play-btn fas fa-play" id="19"></i>
-                            </div>
-                            <p class="content-section-des">What love is</p>
-                        </div>
-                    </div>
-                </div>
+                </header>
             </div>
             
-            <!-- BXH -->
+            <div class="sliders">
+                <div class="mySlides fade slider1"></div>
+                <div class="mySlides fade slider2"></div>
+                <div class="mySlides fade slider3"></div>
+            </div>
 
-            <div id="BXH" class="content-ranking container">
-                <h1>BXH</h1>
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-4 top-song">
+            
+            <!---->
+            <div class="content">
+                <div class="content__section" id="nhacviet">
+                    <div class="container">
+                        <h2 class="content__section-heading">Nhạc Việt</h2>
+                        <div class="row">
+                            <div class="col col-3 song-list1">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/phaichangtadayeu.jpg" alt="Phải chăng em đã yêu" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Phải chăng em đã yêu</p>
+                            </div>
+                            <div class="col col-3 song-list1">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/saigondaulongqua.jpg" alt="Sài gòn đau lòng quá" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Sài gòn đau lòng quá</p>
+                            </div>
+                            <div class="col col-3 song-list1">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/anhdechcanginhieu ngoai em.jpg" alt="Anh đếch cần gì nhiều ngoài em" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Anh đếch cần gì nhiều ngoài em</p>
+                            </div>
+                            <div class="col col-3 song-list1">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/chilakhongcungnhau.jpg" alt="Chỉ là không cùng nhau" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Chỉ là không cùng nhau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__section" id="nhactrutinh">
+                    <div class="container">
+                        <h2 class="content__section-heading">Nhạc trữ tình</h2>
+                        <div class="row">
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <div class="relative-play-btn">
+                                        <img src="./song_img/TThoanovedem.jpg" alt="Con đường xưa em đi" class="content__section-img">
+                                    </div>
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Con đường xưa em đi</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/TTlamdauxula.jpg" alt="Làm dâu xứ lạ" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Làm dâu xứ lạ</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/TTtauanhquanui.jpg" alt="Tàu anh qua núi" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Tàu anh qua núi</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/TTquangbinhqueta.jpg" alt="Quảng bình quê ta ơi" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Quảng bình quê ta ơi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__section" id="nhacUSUK">
+                    <div class="container">
+                        <h2 class="content__section-heading">US-UK</h2>
+                        <div class="row">
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/USUKnotimetodie.jpg" alt="No time to die" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">No time to die</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/USUKphysical.jpg" alt="Physical" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>                            
+                                <p class="content-section-des">Physical</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/USUKsouvernir.jpg" alt="Souvenir" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>                            
+                                <p class="content-section-des">Souvenir</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/USUKthe1.jpg" alt="The 1" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">The 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__section" id="nhachanquoc">
+                    <div class="container">
+                        <h2 class="content__section-heading">Hàn quốc</h2>
+                        <div class="row">
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/nhachan2.jpg" alt="Ddu-Du Ddu-Du" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Ddu-Du Ddu-Du</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/nhachan.jpg" alt="Lalisa" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Lalisa</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/nhachan4.jpg" alt="Loco" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Loco</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/nhachan3.jpg" alt="Not Today" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Not Today</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__section" id="nhacrap">
+                    <div class="container">
+                        <h2 class="content__section-heading">Rap</h2>
+                        <div class="row">
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/RAPcauca.jpg" alt="Cậu Cả" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Cậu Cả</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/Rap thu cuoi.jpg" alt="Thu Cuối" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Thu Cuối</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/trontim.jpg" alt="Trốn tìm" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">Trốn tìm</p>
+                            </div>
+                            <div class="col col-3">
+                                <div class="relative-play-btn">
+                                    <img src="./song_img/Rap what love is.jpg" alt="What love is" class="content__section-img">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <p class="content-section-des">What love is</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BXH -->
+
+                <div id="BXH" class="content-ranking container">
+                    <h1>BXH</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-4 top-song">
+                                    <div class="top-song-img relative-play-btn">
+                                        <img src="./song_img/saigondaulongqua.jpg" alt="">
+                                        <i class="play-btn fas fa-play"></i>
+                                    </div>
+                                    <div class="top-song-des">
+                                        <div class="top-song-info">
+                                            <p class="top-song-name">Sài Gòn đau lòng quá</p>
+                                            <p class="top-song-auth">Hứa Kim Tuyền, Hoàng Duyên</p>
+                                        </div>
+                                        <span class="top-song-rank">#1</span>
+                                    </div>
+                            </div>
+                            <div class="col col-4 top-song">
                                 <div class="top-song-img relative-play-btn">
+<<<<<<< HEAD
                                     <img src="./song_img/saigondaulongqua.jpg" alt="">
                                     <i class="play-btn fas fa-play" id="1"></i>
+=======
+                                    <img src="./song_img/trontim.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+>>>>>>> 2d4a875ad4f60493bbf4e7798fadaae76e566e15
                                 </div>
                                 <div class="top-song-des">
                                     <div class="top-song-info">
-                                        <p class="top-song-name">Sài Gòn đau lòng quá</p>
-                                        <p class="top-song-auth">Hứa Kim Tuyền, Hoàng Duyên</p>
+                                        <p class="top-song-name">Trốn tìm</p>
+                                        <p class="top-song-auth">Đen Vâu</p>
                                     </div>
-                                    <span class="top-song-rank">#1</span>
+                                    <span class="top-song-rank">#2</span>
                                 </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="top-song-img relative-play-btn">
-                                <img src="./song_img/trontim.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
                             </div>
-                            <div class="top-song-des">
-                                <div class="top-song-info">
-                                    <p class="top-song-name">Trốn tìm</p>
-                                    <p class="top-song-auth">Đen Vâu</p>
+                            <div class="col col-4 top-song">
+                                <div class="top-song-img relative-play-btn">
+                                    <img src="./song_img/nhachan.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
                                 </div>
-                                <span class="top-song-rank">#2</span>
-                            </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="top-song-img relative-play-btn">
-                                <img src="./song_img/nhachan.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="top-song-des">
-                                <div class="top-song-info">
-                                    <p class="top-song-name">Lalisa</p>
-                                    <p class="top-song-auth">Lisa</p>
+                                <div class="top-song-des">
+                                    <div class="top-song-info">
+                                        <p class="top-song-name">Lalisa</p>
+                                        <p class="top-song-auth">Lisa</p>
+                                    </div>
+                                    <span class="top-song-rank">#3</span>
                                 </div>
-                                <span class="top-song-rank">#3</span>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div class="row-2">
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/USUKthe1.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">The 1</p>
-                                    <p class="low-song-auth">Taylor Swift</p>
+                        <div class="row-2">
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/USUKthe1.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
                                 </div>
-                                <span class="low-song-rank">#4</span>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">The 1</p>
+                                        <p class="low-song-auth">Taylor Swift</p>
+                                    </div>
+                                    <span class="low-song-rank">#4</span>
+                                </div>
+                            </div>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/Rap thu cuoi.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Thu cuối</p>
+                                        <p class="low-song-auth">Lisa</p>
+                                    </div>
+                                    <span class="low-song-rank">#5</span>
+                                </div>
+                            </div>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/RAPcauca.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Cậu cả</p>
+                                        <p class="low-song-auth">Xavi</p>
+                                    </div>
+                                    <span class="low-song-rank">#6</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/Rap thu cuoi.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Thu cuối</p>
-                                    <p class="low-song-auth">Lisa</p>
+                        <div class="row-2">
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/TThoanovedem.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
                                 </div>
-                                <span class="low-song-rank">#5</span>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Con đường xưa em đi</p>
+                                        <p class="low-song-auth">Lan Anh</p>
+                                    </div>
+                                    <span class="low-song-rank">#7</span>
+                                </div>
+                            </div>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/nhachan2.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Ddu-Du Ddu-Du</p>
+                                        <p class="low-song-auth">Black Pink</p>
+                                    </div>
+                                    <span class="low-song-rank">#8</span>
+                                </div>
+                            </div>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/Rap what love is.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">What love is</p>
+                                        <p class="low-song-auth">Gonzo, Binz, Thành Draw</p>
+                                    </div>
+                                    <span class="low-song-rank">#9</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/RAPcauca.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Cậu cả</p>
-                                    <p class="low-song-auth">Xavi</p>
-                                </div>
-                                <span class="low-song-rank">#6</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-2">
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/TThoanovedem.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Con đường xưa em đi</p>
-                                    <p class="low-song-auth">Lan Anh</p>
-                                </div>
-                                <span class="low-song-rank">#7</span>
-                            </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/nhachan2.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Ddu-Du Ddu-Du</p>
-                                    <p class="low-song-auth">Black Pink</p>
-                                </div>
-                                <span class="low-song-rank">#8</span>
-                            </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/Rap what love is.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">What love is</p>
-                                    <p class="low-song-auth">Gonzo, Binz, Thành Draw</p>
-                                </div>
-                                <span class="low-song-rank">#9</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row-2">
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/chilakhongcungnhau.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Chỉ là không cùng nhau</p>
-                                    <p class="low-song-auth">Tăng Phức, Trương Thảo Nhi</p>
+                        <div class="row-2">
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/chilakhongcungnhau.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
                                 </div>
-                                <span class="low-song-rank">#10</span>
-                            </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/nhachan3.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Not today</p>
-                                    <p class="low-song-auth">BTS</p>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Chỉ là không cùng nhau</p>
+                                        <p class="low-song-auth">Tăng Phức, Trương Thảo Nhi</p>
+                                    </div>
+                                    <span class="low-song-rank">#10</span>
                                 </div>
-                                <span class="low-song-rank">#11</span>
                             </div>
-                        </div>
-                        <div class="col col-4 top-song">
-                            <div class="low-song-img relative-play-btn">
-                                <img src="./song_img/USUKsouvernir.jpg" alt="">
-                                <i class="play-btn fas fa-play"></i>
-                            </div>
-                            <div class="low-song-des">
-                                <div class="top-song-info">
-                                    <p class="low-song-name">Souvenir</p>
-                                    <p class="low-song-auth">Selena Gomez</p>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/nhachan3.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
                                 </div>
-                                <span class="low-song-rank">#12</span>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Not today</p>
+                                        <p class="low-song-auth">BTS</p>
+                                    </div>
+                                    <span class="low-song-rank">#11</span>
+                                </div>
+                            </div>
+                            <div class="col col-4 top-song">
+                                <div class="low-song-img relative-play-btn">
+                                    <img src="./song_img/USUKsouvernir.jpg" alt="">
+                                    <i class="play-btn fas fa-play"></i>
+                                </div>
+                                <div class="low-song-des">
+                                    <div class="top-song-info">
+                                        <p class="low-song-name">Souvenir</p>
+                                        <p class="low-song-auth">Selena Gomez</p>
+                                    </div>
+                                    <span class="low-song-rank">#12</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="aplayer"></div>
-        
-        <!----->
-        <footer class="footer">
-            <div class="social">
+            <div class="player">
+                <!-- Dashboard -->
+                <div class="dashboard hiden">
+                    
+                    <!-- CD -->
+                    <div class="cd">
+                        <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')"></div>
+                    </div>
+                    <!-- Header -->
+                    <div class="player-header">
+                        <h2>....</h2>
+                        <h4>....</h4>
+                    </div>
+              
+                  <!-- Control -->
+                  <div class="control">
+                    <div class="control-song">
+                        <div class="btn btn-repeat">
+                            <i class="ti-loop"></i>
+                          </div>
+                          <div class="btn btn-prev">
+                            <i class="fas fa-step-backward"></i>
+                          </div>
+                          <div class="btn btn-toggle-play">
+                            <i class="fas fa-pause icon-pause"></i>
+                            <i class="fas fa-play icon-play"></i>
+                          </div>
+                          <div class="btn btn-next">
+                            <i class="fas fa-step-forward"></i>
+                          </div>
+                          <div class="btn btn-random">
+                            <i class="fas fa-random"></i>
+                          </div>
+                    </div>
+                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                  </div>
+                  <div class="control-2">
+                    <div class="btn btn-lyrics">
+                        <i class="ti-microphone"></i>
+                    </div>
+                    <div class="btn btn-listmusic">
+                      <i class="fas fa-sliders-h"></i>
+                    </div>
+                  </div>
+              
+                  <audio id="audio" src=""></audio>
+                </div>
+              
+                <!-- Playlist -->
+                <div class="playlist hiden">
+                    
+                </div>
+              </div>
+            
+            
+            <!----->
+            <footer class="footer">
+             <div class="social">
                 <a href="http://facebook.com"><i class="icon-social fab fa-facebook-square"></i></a>
                 <a href="http://twitter.com"><i class="icon-social fab fa-twitter"></i></a>
                 <a href="http://youtube.com"><i class="icon-social fab fa-youtube"></i></a>
@@ -449,24 +506,10 @@
                     Hà Jang city
                 </div>
             </div>
-        </footer>
+            </footer>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-
-        <script>
-            $(".play-btn").on('click', function(e){
-			var dataSwitchId = this.id;
-			console.log(dataSwitchId);
-            ap.list.switch(dataSwitchId);
-            ap.play();
-            ap.list.hide();
-            var ele = document.getElementById("aplayer");
-            ele.classList.add('showPlayer');
-        });
-        </script>
-        <script src="./main.js"></script>
-        <script src="./player.js"></script>
-</body>
+            <script src="./main.js"></script>
+    </body>
 
 </html>
+

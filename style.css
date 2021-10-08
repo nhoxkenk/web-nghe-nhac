@@ -17,7 +17,9 @@ body {
 img{
   border-radius: 8px;
 }
-
+:root {
+  --primary-color:#9353e8;
+}
 
 .header{
   position: fixed;
@@ -80,6 +82,11 @@ img{
   opacity: 0.7;
 }
 
+/* .type-list .type-item:hover{
+  color: rgb(130 200 220);
+  background-color: whitesmoke;
+  border-radius: 8px;
+} */
 .user {
   color: whitesmoke;
   position: relative;
@@ -298,44 +305,6 @@ img{
 .low-song-des .low-song-auth{
   font-size: 10px;
 }
-
-#aplayer{
-  position: fixed;
-  bottom: -50%;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  box-shadow: 0 -2px 2px #dadada;
-  background-color: #fff;
-  transition: all ease 0.5s;
-}
-#aplayer.showPlayer{
-  bottom: 0;
-}
-
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
-  background: #e0e0e0;
-  height: 4px;
-}
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
-  height: 3px;
-  background-color: #2196F3 !important;
-}
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
-  background-color: #2196F3 !important;
-}
-
-.aplayer .aplayer-icon{
-  width: 20px;
-  height: 20px;
-}
-.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
-  fill: rgb(0, 0, 0);
-}
-.aplayer .aplayer-info .aplayer-music{
-  margin-bottom: 10px;
-}
-
 /* footer */
 .footer{
   display: flex;
@@ -367,3 +336,237 @@ img{
   font-size: 12px;
   text-align: center;
 }
+
+
+
+/* Con-trol css */
+
+
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  background-color: #181818;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+  z-index: 2;
+}
+
+.player-header {
+  margin-right: 100px;
+  width: 250px;
+}
+
+.player-header h2 {
+  font-size: 16px;
+}
+
+.cd {
+  width: 50px;
+  margin: 0 10px 0 20px;
+  
+}
+
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  background-size: cover;
+  /* margin: auto; */
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.control-song {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.btn-repeat {
+  margin-right: 50px;
+  font-size: 17px;
+}
+
+.btn-prev {
+  margin-right: 50px;
+}
+
+.btn-toggle-play {
+  margin-right: 50px;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+
+.btn-next {
+  margin-right: 50px;
+}
+.btn-random {
+  margin-right: 50px;
+}
+
+.btn-lyrics {
+    margin-right: 70px;
+    
+}
+
+.btn-listmusic {
+  padding: 4px;
+}
+
+.control .btn.active {
+  color: var(--primary-color);
+}
+
+.control-2 {
+  display: flex;
+  margin-left: 70px;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.progress {
+  width: 700px;
+  margin-bottom: -5px;
+}
+
+.playlist {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  background-color: #2d2f32;
+  /* background-color: #fff; */
+  color: rgb(167, 165, 165);
+  /* bottom: 0; */
+  width: 320px;
+  z-index: 1;
+  height: 100vh;
+  overflow-y: scroll; 
+}
+
+.btn-listmusic.active {
+  color: var(--primary-color);
+}
+
+.show {
+  display: block;
+}
+
+.hiden {
+  display: none;
+}
+
+.playlist-heading {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 20px;
+  color: #a8a8aa;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.playlist::-webkit-scrollbar {
+  width: 5px;
+  background-color: #7b7c7f;
+  
+}
+
+.playlist::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background-color: #000;
+  
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 10px 10px ;
+  position: relative;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.song:hover {
+  background-color: #2d2f32;
+  cursor: pointer;
+}
+
+.song.active {
+  background-color: #7200a1;
+}
+.song:active {
+  opacity: 0.8;
+}
+.song .thumb {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.song.active .author,
+.song.active .title {
+  color: #fff;
+}
+
+
+.song .title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #bdbebe;
+}
+
+.song .author {
+  font-size: 13px;
+  color: #7d7e80;
+}
+
+.song .btn-download {
+  margin-left: 20px;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #bdbebe;
+}
+
+/* 
+@keyframes show {
+  from {
+    tran
+  }
+} */
