@@ -360,7 +360,7 @@ img{
 }
 
 .player-header {
-  margin-right: 100px;
+  margin-right: 50px;
   width: 250px;
 }
 
@@ -387,7 +387,7 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  margin-right: 20px;
 }
 
 .control-song {
@@ -433,7 +433,7 @@ img{
 }
 
 .btn-lyrics {
-    margin-right: 70px;
+  margin-right: 40px;
     
 }
 
@@ -441,13 +441,42 @@ img{
   padding: 4px;
 }
 
+.btn-volume {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.volume-progress {
+  width: 70px;
+  height: 3px;
+  
+}
+
+.btn-volume .volume-icon {
+  margin-right: 6px;
+  display: none;
+}
+
+.volume-icon.hearing {
+  display: block;
+}
+
+
+
+.volume-icon.hearing ~ .mute-icon {
+  display: none;
+}
+
+.displa
+
 .control .btn.active {
   color: var(--primary-color);
 }
 
 .control-2 {
   display: flex;
-  margin-left: 70px;
+  margin-left: 20px;
   flex-direction: row;
   align-items: center;
 }
@@ -455,8 +484,9 @@ img{
 
 
 .progress {
-  width: 700px;
+  width: 600px;
   margin-bottom: -5px;
+  
 }
 
 .playlist {
@@ -469,7 +499,8 @@ img{
   /* bottom: 0; */
   width: 320px;
   z-index: 10;
-  height: 100vh;
+  /* bottom: 90px; */
+  height: calc(100vh - 146px);
   overflow-y: scroll; 
 }
 
@@ -566,6 +597,10 @@ img{
   font-size: 15px;
   text-decoration: none;
   color: #bdbebe;
+}
+
+.song .btn-download:hover {
+  color: #000;
 }
 
 /* 

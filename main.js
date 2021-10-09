@@ -33,6 +33,9 @@ const nextBtn = $('.btn-next')
 const prevBtn = $('.btn-prev')
 const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
+const volumeProgress = $('.volume-progress')
+const volumeIcon = $('.volume-icon')
+const volumeBtn = $('.volume-toggle')
 const nhacviet = {
     currentIndex : 0,
     isPlaying: false,
@@ -551,10 +554,10 @@ const nhacTruTinh = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-nhacTruTinh.start(); 
 const songlist2 = document.querySelectorAll('.song-list2')
 songlist2.forEach(function(currentValue,index){
     currentValue.onclick = function () {
+        nhacTruTinh.start(); 
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         nhacTruTinh.currentIndex = index;
@@ -812,10 +815,11 @@ const nhacUSUK = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-nhacUSUK.start(); 
+ 
 const songlist3 = document.querySelectorAll('.song-list3')
 songlist3.forEach(function(currentValue,index){
     currentValue.onclick = function () {
+        nhacUSUK.start();
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         nhacUSUK.currentIndex = index;
@@ -1073,10 +1077,10 @@ const nhacHQ = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-nhacHQ.start(); 
 const songlist4 = document.querySelectorAll('.song-list4')
 songlist4.forEach(function(currentValue,index){
     currentValue.onclick = function () {
+        nhacHQ.start(); 
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         nhacHQ.currentIndex = index;
@@ -1333,10 +1337,11 @@ const nhacRap = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-nhacRap.start(); 
+ 
 const songlist5 = document.querySelectorAll('.song-list5')
 songlist5.forEach(function(currentValue,index){
     currentValue.onclick = function () {
+        nhacRap.start();
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         nhacRap.currentIndex = index;
@@ -1532,6 +1537,34 @@ const topSong = {
             audio.currentTime = e.target.value * audio.duration / 100;
         }
 
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeIcon.classList.remove('hearing')
+            } else {
+                if (!e.target.closest('.hearing')) {
+                    volumeIcon.classList.add('hearing')
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(volumeProgress.value !== 0) {
+                const lastVolume = audio.volume
+                volumeIcon.classList.remove('hearing')
+                audio.volume = 0
+                volumeProgress.value = 0
+            }
+            else {
+                volumeIcon.classList.add('hearing')
+                audio.volume = lastVolume
+                volumeProgress.value = lastVolume * 100
+            }
+          
+        }
+
         //Xử lý khi nhấn next btn
         nextBtn.onclick = function() {
             
@@ -1656,10 +1689,12 @@ const topSong = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-topSong.start(); 
+
 const topsong = document.querySelectorAll('.top-song')
 topsong.forEach(function(currentValue,index){
+     
     currentValue.onclick = function () {
+        topSong.start();
         document.querySelector('.dashboard').classList.remove('hiden')
         console.log(index);
         topSong.currentIndex = index;
@@ -1668,3 +1703,7 @@ topsong.forEach(function(currentValue,index){
         audio.play()
     }
 })
+
+
+
+
