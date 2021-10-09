@@ -283,7 +283,7 @@ const nhacviet = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-nhacviet.start();  
+  
 
 
 const playlistBtn = $('.btn-listmusic')
@@ -295,18 +295,29 @@ playlistBtn.onclick = function () {
 }
 
 const songlist1 = document.querySelectorAll('.song-list1')
-songlist1.forEach(function(currentValue,index){
-    currentValue.onclick = function () {
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        nhacviet.currentIndex = index;
-        nhacviet.render()
-        nhacviet.loadCurrentSong()
+// nhacviet.start()
+// songlist1.forEach(function(currentValue,index){
+//     currentValue.onclick = function () {   
+//         nhacviet.currentIndex = index;
+//         nhacviet.start();
+//         audio.play()
+//         document.querySelector('.dashboard').classList.remove('hiden')
+//         // nhacviet.render()
+//         // nhacviet.loadCurrentSong()
+//     }
+// })
+
+songlist1.forEach(function(song,index){
+    song.onclick = function() {
+        
+        nhacviet.currentIndex = index
+        nhacviet.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        nhacviet.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
 
-// Nhạc Trữ Tình 
 
 const nhacTruTinh = {
     currentIndex : 0,
@@ -554,16 +565,16 @@ const nhacTruTinh = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
+
 const songlist2 = document.querySelectorAll('.song-list2')
-songlist2.forEach(function(currentValue,index){
-    currentValue.onclick = function () {
-        nhacTruTinh.start(); 
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        nhacTruTinh.currentIndex = index;
-        nhacTruTinh.render()
-        nhacTruTinh.loadCurrentSong()
+songlist2.forEach(function(song,index){
+    song.onclick = function() {
+       
+        nhacTruTinh.currentIndex = index
+        nhacTruTinh.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        nhacTruTinh.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
 
@@ -817,15 +828,15 @@ const nhacUSUK = {
 }
  
 const songlist3 = document.querySelectorAll('.song-list3')
-songlist3.forEach(function(currentValue,index){
-    currentValue.onclick = function () {
-        nhacUSUK.start();
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        nhacUSUK.currentIndex = index;
-        nhacUSUK.render()
-        nhacUSUK.loadCurrentSong()
+songlist3.forEach(function(song,index){
+    song.onclick = function() {
+       
+        nhacUSUK.currentIndex = index
+        
+        nhacUSUK.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        nhacUSUK.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
 
@@ -1078,15 +1089,15 @@ const nhacHQ = {
     }
 }
 const songlist4 = document.querySelectorAll('.song-list4')
-songlist4.forEach(function(currentValue,index){
-    currentValue.onclick = function () {
-        nhacHQ.start(); 
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        nhacHQ.currentIndex = index;
-        nhacHQ.render()
-        nhacHQ.loadCurrentSong()
+songlist4.forEach(function(song,index){
+    song.onclick = function() {
+        
+        nhacHQ.currentIndex = index
+       
+        nhacHQ.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        nhacHQ.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
 
@@ -1339,15 +1350,15 @@ const nhacRap = {
 }
  
 const songlist5 = document.querySelectorAll('.song-list5')
-songlist5.forEach(function(currentValue,index){
-    currentValue.onclick = function () {
-        nhacRap.start();
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        nhacRap.currentIndex = index;
-        nhacRap.render()
-        nhacRap.loadCurrentSong()
+songlist5.forEach(function(song,index){
+    song.onclick = function() {
+      
+        nhacRap.currentIndex = index
+        
+        nhacRap.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        nhacRap.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
 
@@ -1691,19 +1702,17 @@ const topSong = {
 }
 
 const topsong = document.querySelectorAll('.top-song')
-topsong.forEach(function(currentValue,index){
-     
-    currentValue.onclick = function () {
-        topSong.start();
-        document.querySelector('.dashboard').classList.remove('hiden')
-        console.log(index);
-        topSong.currentIndex = index;
-        topSong.render()
-        topSong.loadCurrentSong()
+
+topsong.forEach(function(song,index){
+    song.onclick = function() {
+        
+        topSong.currentIndex = index
+      
+        topSong.currentSong = nhacviet.songs[nhacviet.currentIndex]
+        topSong.start()
         audio.play()
+        document.querySelector('.dashboard').classList.remove('hiden')
     }
 })
-
-
 
 
