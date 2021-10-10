@@ -254,7 +254,7 @@ img{
   display: inline-block !important;
   cursor: pointer;
 }
-.col:hover  img {
+.relative-play-btn:hover  img {
   opacity: 0.6;
   transform: scale(1.05);
 }
