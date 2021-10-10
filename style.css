@@ -441,31 +441,32 @@ img{
   padding: 4px;
 }
 
-.btn-volume {
+.btn-toggle-volume {
   display: flex;
-  margin: 20px;
+  margin: 6px;
   align-items: center;
 }
 
 .volume-progress {
   width: 70px;
   height: 3px;
-  
+  margin-right: 20px;
 }
-
-.btn-volume .volume-icon {
-  margin-right: 6px;
+.btn-toggle-volume .mute-icon {
   display: none;
+  margin-right: 6px;
 }
 
-.volume-icon.hearing {
+.btn-toggle-volume.mute .mute-icon {
   display: block;
 }
 
-
-
-.volume-icon.hearing ~ .mute-icon {
+.btn-toggle-volume.mute .volume-icon {
   display: none;
+}
+
+.btn-toggle-volume .volume-icon {
+  margin-right: 6px;
 }
 
 
@@ -483,7 +484,7 @@ img{
 
 
 .progress {
-  width: 600px;
+  width: 700px;
   margin-bottom: -5px;
   
 }

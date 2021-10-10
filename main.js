@@ -18,8 +18,7 @@ function showSlides() {
 // HMD 
 const $ = document.querySelector.bind(document);
 
-
-const PLAYER_STORAGE_KEY = 'F8_PLAYER'
+const PLAYER_STORAGE_KEY = 'MUSIC_PLAYER'
 const playlist = $('.playlist')
 const cd = $('.cd')
 const playBtn = $('.btn-toggle-play')
@@ -35,7 +34,8 @@ const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
 const volumeProgress = $('.volume-progress')
 const volumeIcon = $('.volume-icon')
-const volumeBtn = $('.volume-toggle')
+const volumeBtn = $('.btn-toggle-volume')
+// const volumeControl = $('.btn-volume')
 const nhacviet = {
     currentIndex : 0,
     isPlaying: false,
@@ -181,6 +181,35 @@ const nhacviet = {
             audio.play()
              _this.render()
             _this.scrollToActiveSong()
+        }
+
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
+            } else {
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
+                audio.volume = 0
+                volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
+            }
+            _this.isMute = !_this.isMute
         }
 
         //Xử lý khi bật tắt random song
@@ -466,9 +495,39 @@ const nhacTruTinh = {
             _this.scrollToActiveSong()
         }
 
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
+            } else {
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
+                audio.volume = 0
+                volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
+            }
+            _this.isMute = !_this.isMute
+        }
+
         //Xử lý khi bật tắt random song
         randomBtn.onclick = function () {
             _this.isRandom = !_this.isRandom
+            
             _this.setconfig('isRandom',_this.isRandom)
             randomBtn.classList.toggle('active',_this.isRandom)
         }
@@ -476,6 +535,7 @@ const nhacTruTinh = {
         // Xử lý khi lặp lại 1 song
         repeatBtn.onclick = function () {
             _this.isRepeat = !_this.isRepeat
+           
             _this.setconfig('isRepeat',_this.isRepeat)
             
             repeatBtn.classList.toggle('active',_this.isRepeat)
@@ -725,6 +785,35 @@ const nhacUSUK = {
             audio.play()
              _this.render()
             _this.scrollToActiveSong()
+        }
+
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
+            } else {
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
+                audio.volume = 0
+                volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
+            }
+            _this.isMute = !_this.isMute
         }
 
         //Xử lý khi bật tắt random song
@@ -989,6 +1078,37 @@ const nhacHQ = {
             _this.scrollToActiveSong()
         }
 
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
+            } else {
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
+                audio.volume = 0
+                volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
+            }
+            _this.isMute = !_this.isMute
+        }
+
+        
+
         //Xử lý khi bật tắt random song
         randomBtn.onclick = function () {
             _this.isRandom = !_this.isRandom
@@ -1249,6 +1369,35 @@ const nhacRap = {
             _this.scrollToActiveSong()
         }
 
+        // Xử lý khi thay đổi âm lượng
+        volumeProgress.onchange = function(e) {
+            if (e.target.value == 0) {
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
+            } else {
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
+                }
+            }
+            audio.volume = e.target.value / 100
+        }
+
+        // Xử lý khi click vào volume btn
+        volumeBtn.onclick = function(e) {
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
+                audio.volume = 0
+                volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
+            }
+            _this.isMute = !_this.isMute
+        }
+
         //Xử lý khi bật tắt random song
         randomBtn.onclick = function () {
             _this.isRandom = !_this.isRandom
@@ -1368,6 +1517,8 @@ const topSong = {
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    isMute: false,
+    lastVolume: 1,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
 
     songs: [
@@ -1434,18 +1585,6 @@ const topSong = {
             singer: 'Tăng Phúc, Trương Thảo Nhi',
             path: './songs/vietnam/4.mp3',
             img: './song_img/chilakhongcungnhau.jpg'
-        },
-        {
-            name: 'Ddu-Du Ddu-Du',
-            singer: 'Black Pink',
-            path: './songs/hanquoc/13.mp3',
-            img: './song_img/nhachan2.jpg'
-        },
-        {
-            name: 'What love is',
-            singer: 'Binz, RPT Gonzo, Thành Draw',
-            path: './songs/rap/20.mp3',
-            img: './song_img/Rap what love is.jpg'
         },
         {
             name: 'Not Today',
@@ -1551,10 +1690,12 @@ const topSong = {
         // Xử lý khi thay đổi âm lượng
         volumeProgress.onchange = function(e) {
             if (e.target.value == 0) {
-                volumeIcon.classList.remove('hearing')
+                volumeBtn.classList.add('mute')
+                _this.isMute = true
             } else {
-                if (!e.target.closest('.hearing')) {
-                    volumeIcon.classList.add('hearing')
+                if (_this.isMute) {
+                    volumeBtn.classList.remove('mute')
+                    _this.isMute = false
                 }
             }
             audio.volume = e.target.value / 100
@@ -1562,18 +1703,17 @@ const topSong = {
 
         // Xử lý khi click vào volume btn
         volumeBtn.onclick = function(e) {
-            if(volumeProgress.value !== 0) {
-                const lastVolume = audio.volume
-                volumeIcon.classList.remove('hearing')
+            if(!_this.isMute) {
+                _this.lastVolume = audio.volume
                 audio.volume = 0
                 volumeProgress.value = 0
+                volumeBtn.classList.add('mute')
+            }else {
+                volumeBtn.classList.remove('mute')
+                audio.volume = _this.lastVolume
+                volumeProgress.value = audio.volume * 100
             }
-            else {
-                volumeIcon.classList.add('hearing')
-                audio.volume = lastVolume
-                volumeProgress.value = lastVolume * 100
-            }
-          
+            _this.isMute = !_this.isMute
         }
 
         //Xử lý khi nhấn next btn
