@@ -323,7 +323,7 @@ playlistBtn.onclick = function () {
     playlistBtn.classList.toggle('active')
 }
 
-const songlist1 = document.querySelectorAll('.song-list1')
+const songlist1 = document.querySelectorAll('.song-list1 .play-btn')
 // nhacviet.start()
 // songlist1.forEach(function(currentValue,index){
 //     currentValue.onclick = function () {   
@@ -626,7 +626,7 @@ const nhacTruTinh = {
     }
 }
 
-const songlist2 = document.querySelectorAll('.song-list2')
+const songlist2 = document.querySelectorAll('.song-list2 .play-btn')
 songlist2.forEach(function(song,index){
     song.onclick = function() {
        
@@ -916,7 +916,7 @@ const nhacUSUK = {
     }
 }
  
-const songlist3 = document.querySelectorAll('.song-list3')
+const songlist3 = document.querySelectorAll('.song-list3 .play-btn')
 songlist3.forEach(function(song,index){
     song.onclick = function() {
        
@@ -1208,7 +1208,7 @@ const nhacHQ = {
         repeatBtn.classList.toggle('active',this.isRepeat)
     }
 }
-const songlist4 = document.querySelectorAll('.song-list4')
+const songlist4 = document.querySelectorAll('.song-list4 .play-btn')
 songlist4.forEach(function(song,index){
     song.onclick = function() {
         
@@ -1498,7 +1498,7 @@ const nhacRap = {
     }
 }
  
-const songlist5 = document.querySelectorAll('.song-list5')
+const songlist5 = document.querySelectorAll('.song-list5 .play-btn')
 songlist5.forEach(function(song,index){
     song.onclick = function() {
       
@@ -1841,7 +1841,7 @@ const topSong = {
     }
 }
 
-const topsong = document.querySelectorAll('.top-song')
+const topsong = document.querySelectorAll('.top-song .play-btn')
 
 topsong.forEach(function(song,index){
     song.onclick = function() {
