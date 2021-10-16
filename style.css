@@ -539,8 +539,9 @@ img{
 } */
 
 
-
+/* loi bai hat */
 .container-lyrics{
+  display: none !important;
   background-color: rgba(53, 48, 48, 0.4);
   position: fixed;
   top: 0;
