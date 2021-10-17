@@ -36,6 +36,12 @@ const volumeProgress = $('.volume-progress')
 const volumeIcon = $('.volume-icon')
 const volumeBtn = $('.btn-toggle-volume')
 // const volumeControl = $('.btn-volume')
+const lyricsTitle = $('.title-lyric')
+const lyricsImg = $('.lyric-song-desc img')
+const songName = $('.content-section-des')
+const songAuth = $('.auth')
+const lyricSong = $('.lyric-song')
+const lyricsBtn = $('.btn-lyrics')
 const nhacviet = {
     currentIndex : 0,
     isPlaying: false,
@@ -48,27 +54,160 @@ const nhacviet = {
             name: 'Phải Chăng Em Đã Yêu',
             singer: 'JUKY SAN',
             path: './songs/vietnam/1.mp3',
-            img: './song_img/phaichangtadayeu.jpg'
+            img: './song_img/phaichangtadayeu.jpg',
+            lyric: 'Lời bài hát Sài Gòn Đau Lòng Quá'+
+            '<br>Mình đã từng hứa'+
+            '<br>Bên nhau hết tháng năm dài'+
+            '<br>Yêu đến khi ngừng hơi thở'+
+            '<br>Đến khi ngừng mơ...'+
+            '<br>Nắm chặt tay đi hết nhân thế này'+
+            '<br>Chân trời hằn chân ta'+
+            '<br>Vô tận là chúng ta...<br>'+
+            '...'+
+            '<br>Mình đã từng hứa<br>'+
+            'Đi qua hết bao thăng trầm<br>'+
+            'Cho dẫu mai này xa rời<br>'+
+            'Vẫn không hề đổi dời...<br>'+
+            'Có ngờ đâu, đã sớm vỡ tan tành<br>'+
+            'Nhặt từng mảnh vỡ xếp vào vali...<br>'+
+            '...'+
+            '<br>Cứ càng yêu, cứ càng đau<br>'+
+            'Cứ càng quên<br>'+
+            'Rồi lại muốn đi thật nhiều<br>'+
+            'Tokyo hay Seoul<br>'+
+            'Paris hay New York<br>'+
+            'Đi càng xa, càng không thể quên...<br>'+
+            '...'+
+            '[ĐK:]<br>'+
+            'Cầm tấm vé trên tay<br>'+
+            'Tôi bay đến nơi xa<br>'+
+            'Sài Gòn đau lòng quá<br>'+
+            'Toàn kỷ niệm chúng ta<br>'+
+            'Phải đi xa đến đâu?<br>'+
+            'Thời gian quên mất bao lâu?<br>'+
+            'Để trái tim tôi bình yên như ngày đầu tiên...<br>'+
+            '...'+
+            '<br>Ngày tôi chưa từng biết<br>'+
+            'Tôi sẽ yêu em nhiều như thế này<br>'+
+            'Để rồi khi ta cách xa tim này nát ra<br>'+
+            'Ngày người chưa đến mang theo giấc mơ<br>'+
+            'Rồi lại bỏ rơi lúc tôi đang chờ...<br>'+
+            'Chờ người đến dịu xoa tổn thương tôi đã từng...<br>'
         },
         {
             name: 'Sài Gòn Đau Lòng Quá',
             singer: 'Hứa Kim Tuyền, Hoàng Duyên',
             path: './songs/vietnam/2.mp3',
-            img: './song_img/saigondaulongqua.jpg'
+            img: './song_img/saigondaulongqua.jpg',
+            lyric: 'Lời bài hát Sài Gòn Đau Lòng Quá<br>'+
+                   'Mình đã từng hứa<br>'+
+                    'Bên nhau hết tháng năm dài<br>'+
+                    'Yêu đến khi ngừng hơi thở<br>'+
+                    'Đến khi ngừng mơ...<br>'+
+                    'Nắm chặt tay đi hết nhân thế này<br>'+
+                    'Chân trời hằn chân ta<br>'+
+                    'Vô tận là chúng ta...<br>'+
+
+                    '...'+
+
+                   '<br>Mình đã từng hứa<br>'+
+                    'Đi qua hết bao thăng trầm<br>'+
+                    'Cho dẫu mai này xa rời<br>'+
+                    'Vẫn không hề đổi dời...<br>'+
+                    'Có ngờ đâu, đã sớm vỡ tan tành<br>'+
+                    'Nhặt từng mảnh vỡ xếp vào vali...<br>'+
+
+                    '...'+
+
+                    '<br>Cứ càng yêu, cứ càng đau<br>'+
+                    'Cứ càng quên<br>'+
+                    'Rồi lại muốn đi thật nhiều<br>'+
+                    'Tokyo hay Seoul<br>'+
+                    'Paris hay New York<br>'+
+                    'Đi càng xa, càng không thể quên...<br>'+
+
+                    '<br>[ĐK:]<br>'+
+                    'Cầm tấm vé trên tay<br>'+
+                    'Tôi bay đến nơi xa<br>'+
+                    'Sài Gòn đau lòng quá<br>'+
+                    'Toàn kỷ niệm chúng ta<br>'+
+                    'Phải đi xa đến đâu?<br>'+
+                    'Thời gian quên mất bao lâu?<br>'+
+                    'Để trái tim tôi bình yên như ngày đầu tiên...<br>'+
+
+                    '<br>Ngày tôi chưa từng biết<br>'+
+                    'Tôi sẽ yêu em nhiều như thế này<br>'+
+                    'Để rồi khi ta cách xa tim này nát ra<br>'+
+                    'Ngày người chưa đến mang theo giấc mơ<br>'+
+                    'Rồi lại bỏ rơi lúc tôi đang chờ...<br>'+
+                    'Chờ người đến dịu xoa tổn thương tôi đã từng...<br>'
 
         },
         {
             name: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
             singer: 'Đen Vâu',
             path: './songs/vietnam/3.mp3',
-            img: './song_img/anhdechcanginhieu ngoai em.jpg'
-
+            img: './song_img/anhdechcanginhieu ngoai em.jpg',
+            lyric: 'Lời bài hát Anh Đếch Cần Gì Nhiều Ngoài Em<br>'+
+            '[Intro:]<br>'+
+            '[Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em.]<br>'+
+            
+            '[Verse 1:]<br>'+
+            'Anh như con cáo, em như một cành nho xanh<br>'+
+            'Khi em còn trẻ và đẹp, em lại không dành cho anh<br>'+
+            'Trong lòng anh là kho xăng, nụ cười em là mồi lửa<br>'+
+            'Em phá vỡ đi quy tắc, rồi bỏ mặc anh ngồi sửa<br>'+
+            'Anh như biến thành người nhện vì trong lòng nhiều tơ vương<br>'+
+            'Nhớ em tốn nhiều ca-lo, thế nên anh gầy trơ xương<br>'+
+            'Ở trong xóm anh rất ngoan, chẳng ai thấy anh say mèm<br>'+
+            'Mẹ anh dặn anh đủ thứ, nhưng quên dặn đừng say em<br>'+
+            'Như con cuốn chiếu, anh có rất nhiều chân thật<br>'+
+            'Bài hát này ngọt, vì đám tụi anh rất thân mật<br>'+
+            'Anh như con cáo và em vẫn cành nho xanh<br>'+
+            'Nhưng mà em trẻ và đẹp, em lại không dành cho anh.<br>'+
+            
+            '[Mel:]<br>'+
+            'Ta đi tìm về thương nhớ<br>'+
+            'Ta đã đi tìm đi tìm đi tìm<br>'+
+            'Ta đã đi tìm về quá khứ<br>'+
+            'Ta cứ đi tìm đi tìm đi tìm.<br>'+
+            
+            '[Hook:]<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Ôi một giấc mơ chơi vơi nhiều đêm<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Thương một giấc mơ ôm ta nhiều đêm.<br>'+
+            
+            '[Verse 2:]<br>'+
+            'Một ngày cùng em uống đến thoáng say là đủ<br>'+
+            'Kệ đời ngả nghiêng<br>'+
+            'Mình nằm dưới tán cây mà ngủ<br>'+
+            'Sẽ thật là tuyệt nếu rơi vào một chiều thu<br>'+
+            'Anh cưa em đổ em gọi anh là tiều phu<br>'+
+            'Anh có thể có danh tiếng nếu như mặt anh dày thêm<br>'+
+            'Anh có thể có nhiều tiền nếu anh cày ngày cày đêm<br>'+
+            'Nhưng như một giấc mơ bị em chối bỏ trong chiều<br>'+
+            'Anh không có được em dù cho cố bỏ công nhiều<br>'+
+            'Nồng độ cồn em bao nhiêu sao cứ làm anh lảo đảo?<br>'+
+            'Em chỉ mang lại chua cay như là gói mì Hảo Hảo<br>'+
+            'Một lần chơi lớn để xem em có trầm trồ<br>'+
+            'Vì yêu em, anh như mang hết con tim đi cầm đồ.<br>'+
+            
+            '[Outro:]<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'+
+            'Và anh đếch cần gì nhiều ngoài em<br>'
         },
         {
             name: 'Chỉ Là Không Cùng Nhau',
             singer: 'Tăng Phúc, Trương Thảo Nhi',
             path: './songs/vietnam/4.mp3',
-            img: './song_img/chilakhongcungnhau.jpg'
+            img: './song_img/chilakhongcungnhau.jpg',
+            lyric: ' '
         }
     ],
     defineProperties: function () {
@@ -255,6 +394,11 @@ const nhacviet = {
         cdThumb.style.backgroundImage = `url('${this.currentSong.img}')`
         audio.src = this.currentSong.path;
         singer.textContent = this.currentSong.singer
+        lyricsImg.src = this.currentSong.img;
+        songName.textContent = this.currentSong.name
+        songAuth.textContent = this.currentSong.singer;
+        lyricsTitle.textContent = 'Lời bài hát '+ this.currentSong.name
+        lyricSong.innerHTML = this.currentSong.lyric
     },
     loadConfig: function () {
         this.isRandom = this.config.isRandom
@@ -321,6 +465,17 @@ playlistBtn.onclick = function () {
         playlist.classList.toggle('hiden')
     },100)
     playlistBtn.classList.toggle('active')
+}
+
+lyricsBtn.onclick = function() {
+    $('.container-lyrics').classList.toggle('hiden')
+    $('.container-lyrics').classList.toggle('flex')
+}
+
+const closeBtn = $('.close-btn')
+closeBtn.onclick = function () {
+    $('.container-lyrics').classList.toggle('hiden')
+    $('.container-lyrics').classList.toggle('flex')
 }
 
 const songlist1 = document.querySelectorAll('.song-list1 .play-btn')
