@@ -1069,7 +1069,7 @@ const nhacUSUK = {
             name: 'Physical',
             singer: 'Dua Lipa',
             path: './songs/usuk/10.mp3',
-            img: './song_img/USUK/physical.jpg',
+            img: './song_img/USUKphysical.jpg',
             lyric:   'Hiển Thị Sub<br>'+
                 'Lời bài hát Physical<br>'+
                 '[Verse 1]<br>'+
