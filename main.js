@@ -55,44 +55,59 @@ const nhacviet = {
             singer: 'JUKY SAN',
             path: './songs/vietnam/1.mp3',
             img: './song_img/phaichangtadayeu.jpg',
-            lyric: 'Lời bài hát Phải Chăng Em Đã Yêu'+
-            '<br>Mình đã từng hứa'+
-            '<br>Bên nhau hết tháng năm dài'+
-            '<br>Yêu đến khi ngừng hơi thở'+
-            '<br>Đến khi ngừng mơ...'+
-            '<br>Nắm chặt tay đi hết nhân thế này'+
-            '<br>Chân trời hằn chân ta'+
-            '<br>Vô tận là chúng ta...<br>'+
-            '...'+
-            '<br>Mình đã từng hứa<br>'+
-            'Đi qua hết bao thăng trầm<br>'+
-            'Cho dẫu mai này xa rời<br>'+
-            'Vẫn không hề đổi dời...<br>'+
-            'Có ngờ đâu, đã sớm vỡ tan tành<br>'+
-            'Nhặt từng mảnh vỡ xếp vào vali...<br>'+
-            '...'+
-            '<br>Cứ càng yêu, cứ càng đau<br>'+
-            'Cứ càng quên<br>'+
-            'Rồi lại muốn đi thật nhiều<br>'+
-            'Tokyo hay Seoul<br>'+
-            'Paris hay New York<br>'+
-            'Đi càng xa, càng không thể quên...<br>'+
-            '...'+
+            lyric: 
+            'Lời bài hát Phải Chăng Em Đã Yêu?<br>'+
+            '1. Cuộc đời em vốn, chỉ là đường thẳng mà thôi<br>'+
+            'Mà sao tình cờ gặp anh, em rẽ ngang qua đời<br>'+
+            'Vài người vội vã, vội đến rồi đi<br>'+
+            'Mà sao em yêu anh đâu cần nghĩ suy.<br>'+
+            '<br>'+
+            'Từng đêm nhớ mong về người<br>'+
+            'Biết anh còn chờ đợi<br>'+
+            'Chơi vơi bao đêm em thấy đủ rồi<br>'+
+            'Ngàn tia nắng anh gần lại<br>'+
+            'Ánh dương màu mắt xanh ngời<br>'+
+            'Lóe lên ngàn giấc mơ còn trong đời.<br>'+
+            '<br>'+
             '[ĐK:]<br>'+
-            'Cầm tấm vé trên tay<br>'+
-            'Tôi bay đến nơi xa<br>'+
-            'Sài Gòn đau lòng quá<br>'+
-            'Toàn kỷ niệm chúng ta<br>'+
-            'Phải đi xa đến đâu?<br>'+
-            'Thời gian quên mất bao lâu?<br>'+
-            'Để trái tim tôi bình yên như ngày đầu tiên...<br>'+
-            '...'+
-            '<br>Ngày tôi chưa từng biết<br>'+
-            'Tôi sẽ yêu em nhiều như thế này<br>'+
-            'Để rồi khi ta cách xa tim này nát ra<br>'+
-            'Ngày người chưa đến mang theo giấc mơ<br>'+
-            'Rồi lại bỏ rơi lúc tôi đang chờ...<br>'+
-            'Chờ người đến dịu xoa tổn thương tôi đã từng...<br>'
+            'Phải chăng em đã yêu<br>'+
+            'Ngay từ cái nhìn đầu tiên<br>'+
+            'Phải chăng em đã say<br>'+
+            'Ngay từ lúc thấy nụ cười ấy.<br>'+
+            '<br>'+
+            'Tình yêu ta ngất ngây<br>'+
+            'Xây được chín tầng trời mây<br>'+
+            'Khuất xa mờ<br>'+
+            'Ánh lên từng giấc mơ ngày có anh.<br>'+
+            '<br>'+
+            '2. Trái đất vốn lạ thường<br>'+
+            'Mà sao em cứ đi nhầm đường<br>'+
+            'Lạc vào tim anh lẻ loi<br>'+
+            'Đằng sau chữ yêu đây là thương.<br>'+
+            '<br>'+
+            'When you call me a baby<br>'+
+            'Make me so crazy<br>'+
+            'My heart is breaking slowly<br>'+
+            'Chầm chậm bờ môi khẽ trôi<br>'+
+            'Ôi mình yêu thật rồi.<br>'+
+            '<br>'+
+            'Tình cờ biết nhớ những lúc ngây thơ<br>'+
+            'Tình cờ lắm lúc chỉ biết vu vơ<br>'+
+            'Tình cờ bơ vơ lạc trong những giấc mơ<br>'+
+            'Lắm lúc chỉ muốn nói anh mãi thương em<br>'+
+            'Nhưng trong tim bâng khuâng chẳng biết có ai xem này<br>'+
+            'Vì chữ thương nặng lắm đâu thể phơi bày.<br>'+
+            '<br>'+
+            '[Bridge:]<br>'+
+            'Yêu hay không yêu<br>'+
+            'Thương em anh hãy nói<br>'+
+            'Trao nhau đôi môi<br>'+
+            'Rồi sẽ trở thành đôi.<br>'+
+            '<br>'+
+            'Em đang chơi vơi<br>'+
+            'Liệu anh có bước tới<br>'+
+            'Chầm chậm nói đôi lời<br>'+
+            'Khiến em chợt vui cười.<br>'
         },
         {
             name: 'Sài Gòn Đau Lòng Quá',
