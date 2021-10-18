@@ -55,7 +55,7 @@ const nhacviet = {
             singer: 'JUKY SAN',
             path: './songs/vietnam/1.mp3',
             img: './song_img/phaichangtadayeu.jpg',
-            lyric: 'Lời bài hát Sài Gòn Đau Lòng Quá'+
+            lyric: 'Lời bài hát Phải Chăng Em Đã Yêu'+
             '<br>Mình đã từng hứa'+
             '<br>Bên nhau hết tháng năm dài'+
             '<br>Yêu đến khi ngừng hơi thở'+
@@ -541,7 +541,7 @@ const nhacTruTinh = {
             singer: 'Phương Anh',
             path: './songs/trutinh/5.mp3',
             img: './song_img/TThoanovedem.jpg',
-            lyric:'Lời bài hát Hoa Nở Về Đêm<br>'+
+            lyric:
             'Chuyện từ một đêm cuối nẻo một người tiễn một người đi<br>'+
             'Đẹp tựa bài thơ nở giữa đêm sương nở tận tâm hồn<br>'+
             'Chuyện một mình tôi chép dòng tâm tình tặng người chưa biết một lần<br>'+
@@ -4008,7 +4008,7 @@ const topSong = {
             singer: 'Phương Anh',
             path: './songs/trutinh/5.mp3',
             img: './song_img/TThoanovedem.jpg',
-            lyric: 'Lời bài hát Hoa Nở Về Đêm<br>'+
+            lyric: 
             'Chuyện từ một đêm cuối nẻo một người tiễn một người đi<br>'+
             'Đẹp tựa bài thơ nở giữa đêm sương nở tận tâm hồn<br>'+
             'Chuyện một mình tôi chép dòng tâm tình tặng người chưa biết một lần<br>'+
