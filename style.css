@@ -623,3 +623,31 @@ img{
   text-align: center;
   margin-top: 5px;
 }
+
+
+/* Download */
+.relative-play-btn .download-btn {
+  display: none;
+  position: absolute;
+  right: 50%;
+  top: calc(50% + 20px);
+  text-decoration: none;
+  font-size: 30px;
+  color: whitesmoke;
+  transform: translateX(50%);
+}
+
+
+/* download-bxh */
+.relative-play-btn .download-btn-topsong,
+.relative-play-btn .download-btn-lowsong
+{
+  display: none;
+  position: absolute;
+  right: 50%;
+  top: calc(50% + 10px);
+  text-decoration: none;
+  font-size: 12px;
+  color: whitesmoke;
+  transform: translateX(50%);
+}  
