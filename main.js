@@ -160,7 +160,7 @@ const nhacviet = {
         },
         {
             name: 'Anh Đếch Cần Gì Nhiều Ngoài Em',
-            singer: 'Đen Vâu',
+            singer: 'Đen',
             path: './songs/vietnam/3.mp3',
             img: './song_img/anhdechcanginhieu ngoai em.jpg',
             lyric: 'Lời bài hát Anh Đếch Cần Gì Nhiều Ngoài Em<br>'+
@@ -2834,7 +2834,7 @@ const nhacRap = {
         },
         {
             name: 'Trốn Tìm',
-            singer: 'Đen Vây',
+            singer: 'Đen',
             path: './songs/rap/19.mp3',
             img: './song_img/trontim.jpg',
             lyric: 'Lời bài hát Trốn Tìm<br>'+
